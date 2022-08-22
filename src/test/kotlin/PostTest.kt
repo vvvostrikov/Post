@@ -69,7 +69,7 @@ class PostTest {
         val video = AttachmentVideo("Как пожарить сыр на сковородке")
         arrayOfAttachments += video
         val comment = Comment(
-            500, 500, 1, 1, "1", 1, 1, 1, video , arrayOfAttachments, 1
+            500, 500, 1,  "1", 1, 1, 1, video , arrayOfAttachments, 1
         )
         val post1 = WallService.add(
             Post(
@@ -142,7 +142,7 @@ class PostTest {
             )
         )
         val comment = Comment(
-            1, 500, 1, 1, "1", 1, 1, 1, video , arrayOfAttachments, 1
+            1, 500, 1, "1", 1, 1, 1, video , arrayOfAttachments, 1
         )
         WallService.createComment(comment)
     }

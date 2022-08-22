@@ -11,22 +11,24 @@ fun main() {
     arrayOfAttachments += text
     arrayOfAttachments += photo
     arrayOfAttachments += link
-    val post1 = posts.add(Post(0, 1, 1, 1, 1, "65",1, 1, true ,1,1,1,
+    val post1 = posts.add(Post(1, 1, 1, 1, 1, "65",1, 1, true ,1,1,1,
         1, 1, "1", 1, true, 1, true, true, true,
         true, true, true, 1, null, arrayOfAttachments))
-    val post2 = posts.update(Post(1, 1, 1, 1, 1, "32",1, 1, true ,1,1,1,
+    val post2 = posts.update(Post(2, 1, 1, 1, 1, "32",1, 1, true ,1,1,1,
         1, 1, "1", 1, true, 1, true, true,
         true, true, true, true, 1, null, arrayOfAttachments))
 
     val comment = Comment(
-        1, 1, 1, 1, "1", 1, 1, 1, video, arrayOfAttachments, 1
+        1, 1, 1, "1", 1, 1, 1, video, arrayOfAttachments, 1
     )
 
     WallService.createComment(comment)
 
+
     println(post1.id)
     println(post2)
     println(comment)
+
 
 
 }

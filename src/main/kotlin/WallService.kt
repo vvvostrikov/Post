@@ -34,9 +34,11 @@ object WallService {
 
     fun createComment(comment: Comment) {
         for (post in posts) {
-            if (comment.postId == post.id) {
+            if (comment.id == post.id) {
                 comments += comment
-            } else throw PostNotFoundException("not comments")
+                return
+            }
         }
+        throw PostNotFoundException("not comments")
     }
 }
